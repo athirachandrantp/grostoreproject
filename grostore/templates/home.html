@@ -1,0 +1,54 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static%}
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+   <script src="{% static 'js/login.js' %}"></script>
+<div class="container">
+  <div class="row">
+ <div class=" main col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+   <h1 id="main_txt">GRO STORE</h1>
+  <p> All time service</p>
+  
+ </div>
+</div>
+</div>  
+
+
+
+
+<section class="header-extradiv">
+  <div class="container">
+<div class="row">
+  <div class="heading col-12 col-lg-12 col-sm-12 col-md-12"><h1>What do we provide</h1></div><br><br>
+  <div class="extradiv col-3 col-sm-3 col-md-3 col-xl-3 col-lg-3">
+    <h2>Grocery</h2>
+   <a href="{% url 'grostore:product_html' %}"><p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudianda
+       ipsa velit aperiam magnam mo moles corrupti.</p></a>
+  </div>
+  <div class="extradiv col-3 col-sm-3 col-md-3 col-xl-3 col-lg-3">
+  <h2>Fruits</h2>
+ <a href=""><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, fugit?</p></a>
+  </div>
+  <div class="extradiv col-3 col-sm-3 col-md-3 col-xl-3 col-lg-3">
+  <h2>vegetables</h2>
+ <a href=""> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, 
+    distiperspiciatis quo?</p></a>
+  </div>
+  <div class="extradiv col-3 col-sm-3 col-md-3 col-xl-3 col-lg-3">
+  <h2>Chocolates</h2>
+  <p><a href=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus omnis recusandae ipsum.</a></p>
+  </div>
+</div>
+</div>x
+</section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    {% endblock %}

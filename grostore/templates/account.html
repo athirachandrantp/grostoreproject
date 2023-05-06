@@ -1,0 +1,41 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-bordered">
+                <h3>Account Setting</h3>
+                <tbody>
+                  <tr>
+                    <td><a href="{% url 'grostore:cart_html' %}"> your orders</a></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td><a href="{% url 'grostore:loginpage_html' %}">login & security</a></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                      <td><a href="{% url 'grostore:userlogout' %}">Logout</a></td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td><a href="">login & security</a></td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td><a href="">login & security</a></td>
+                    </tr>
+                  </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

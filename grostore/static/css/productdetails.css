@@ -1,0 +1,13 @@
+.card-img-top{
+    width: 100px  !important;
+    height: 80px !important;
+    display: block !important;
+}
+.pdt_details{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: rgb(20, 19, 19);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        {% csrf_token %}
+        <tr>
+            <th>name</th>
+            <th>address</th>
+            <th>contact</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>confirmpassword</th>
+            <th>delete</th>
+        </tr>
+        {% for admin in admindt %}
+        <tr>
+            <td>{{admin.adminname}}</td>
+            <td>{{admin.adminaddress}}</td>
+            <td>{{admin.admincontact}}</td>
+            <td>{{admin.adminusername}}</td>
+            <td>{{admin.adminpassword}}</td>
+            <td>{{admin.adminconfirmpassword}}</td>
+            <td><a href="{% url 'adminapp:delete_admin' admin.id %}">delete</a></td>
+            <td><a href=""></a></td>
+
+        </tr>
+        {% endfor %}
+
+</body>
+
+</html>

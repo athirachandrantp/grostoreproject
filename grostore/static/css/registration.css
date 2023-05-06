@@ -1,0 +1,73 @@
+.maindiv{
+    background-color: whitesmoke;
+    width: 400px;
+    height: 460px;
+    margin-top: 100px;
+    overflow:auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+.userreg{
+    background-color: #608a8a;
+    height: 40px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+#_fullname{
+    margin: 5px 10px 5px 60px;
+    border-radius: 5px;
+    border-width:1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#_address{
+    /* margin-left: 70px; */
+    margin: 5px 0 5px 76px;
+    border-radius: 5px;
+    border-width:1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#_number{
+    /* margin-left: 10px; */
+    margin: 5px 0 5px 32px;
+    border-radius: 5px;
+    border-width:1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#_username{
+    /* margin-left: 55px; */
+    margin: 5px 0 5px 63px;
+    border-radius: 5px;
+    border-width:1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#_password{
+    /* margin-left: 60px; */
+    margin: 5px 0 5px 66px;
+    border-radius: 5px;
+    border-width:1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#_confirmpassword{
+    /* margin-left: 3.5px; */
+    margin: 5px 0 5px 7px;
+    border-radius: 5px;
+    border-width:1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#_dob{
+    margin: 5px 0 5px 59px;
+    border-radius: 5px;
+    border-width:1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#reg_btn{
+    background-color: whitesmoke;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 24px 0 0 135px;
+
+}
+#reg_btn:hover{
+    background-color: #9ab8b8;
+}

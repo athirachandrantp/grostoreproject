@@ -1,0 +1,12 @@
+.admin_img img{
+    width: 160px ;
+    height: 100px ;
+    /* display: block ; */
+}
+.table{
+    border: 1px;
+}
+h2{
+    top: 10px;
+    text-align: center;
+}

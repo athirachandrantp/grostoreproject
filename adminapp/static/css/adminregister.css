@@ -1,0 +1,62 @@
+.regdiv{
+    background-color: whitesmoke;
+    width: 400px;
+    height: 400px;
+    margin-top: 200px;
+    overflow:auto;
+}
+.adminreg{
+    background-color: #608a8a;
+    height: 40px;
+    text-align: center;
+}
+#a_name{
+    /* margin-left: 55px; */
+    margin: 5px 0 5px 55px;
+}
+#a_address{
+    /* margin-left: 70px; */
+    margin: 5px 0 5px 70px;
+}
+#a_number{
+    /* margin-left: 10px; */
+    margin: 5px 0 5px 10px;
+}
+#a_username{
+    /* margin-left: 55px; */
+    margin: 5px 0 5px 55px;
+}
+#a_password{
+    /* margin-left: 60px; */
+    margin: 5px 0 5px 60px;
+}
+#a_confirmpassword{
+    /* margin-left: 3.5px; */
+    margin: 5px 0 5px 3.5px;
+}
+#_btn{
+    background-color: whitesmoke;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 24px 0 0 65px;
+}
+._btn{
+    background-color: whitesmoke;
+    margin: 24px 0 0 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    color: black;
+}
+._btn a{
+    color: black;
+    text-decoration: none;
+}
+#_btn:hover{
+    background-color: #9ab8b8;
+}
+._btn:hover{
+    background-color: #9ab8b8;
+}

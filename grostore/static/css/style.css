@@ -1,0 +1,43 @@
+.logo_img{
+    /* height: 100px; */
+    /* margin-top: 0px; */
+    padding-top: 0px;
+    margin-left: 0px;
+    width: 90px;
+
+}
+.bg-light{
+    color: white !important;
+    font-size: 15px !important;
+    font-family: 'Times New Roman', Times, serif !important;
+
+}
+.bg-light:hover{
+    color: violet !important;
+}
+.my-sm-0{
+    color: white !important;
+
+}
+.nav-item{
+    color: white !important;
+}
+
+.footersection{
+    width: 100%;
+    height: auto;
+    padding: 70px 0 20px 0;
+    background-color: white!important;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 3);
+
+}
+.footersection h3{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.footersection p{
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+}

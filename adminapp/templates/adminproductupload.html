@@ -1,0 +1,48 @@
+{% extends 'master1.html' %}
+{% block content %}
+<!-- {% load static %} -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/productupload.css' %}">
+<br>
+<h2>PRODUCT UPLOAD :</h2>
+<div class="product_div"><br><br>
+    <form action="" method="post" enctype="multipart/form-data" class="product">
+        {% csrf_token %}
+        <div class="product_border"><br><br>
+            <br><br>
+            <div class="u_title"> <label for="">TITLE :</label>
+                <input type="text" name="u_title" id="">
+            </div><br><br>
+            <div class="u_category"><label for="">CATEGORY :</label>
+                <!-- <input type="text" name="u_category" id=""> -->
+                <select name="u_category" id="">
+                <option value="">--Items--</option>
+                <option value="">Grocery</option>
+                <option value="">Fruits</option>
+                <option value="">Vegetables</option>
+                <option value="">Choclates</option>
+            </select>
+
+            </div><br><br>
+            <div class="u_number"> <label for="">Quantitiy :</label>
+                <input type="number" name="u_quantity" id="">
+            </div>
+            <div class="u_number"> <label for="">price :</label>
+                <input type="text" name="u_price" id="">
+            </div>
+            <div class="u_description"><label for="">DESCRIPTION :</label>
+                <input type="text" name="u_description" id="">
+            </div><br><br>
+            <div class="u_image"><label for="">IMAGE :</label>
+                <input type="file" name="u_pic" id="">
+            </div><br>
+            <button class="product_save">save</button>
+            <p>{{res}}</p>
+        </div>
+    </form>
+</div><br><br><br><br><br><br><br><br><br><br>
+
+{% endblock %}

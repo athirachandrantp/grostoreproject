@@ -1,0 +1,16 @@
+/* .dropdown-menu{
+    display:block !important;
+    z-index: 5 !important;
+    position:relative;
+    background:palevioletred;
+
+} */
+.navbar-brand{
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 10px;
+}
+.adminhome{
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 10px !important;
+
+}

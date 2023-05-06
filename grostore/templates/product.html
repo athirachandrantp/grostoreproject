@@ -1,0 +1,406 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+<script src="{% static 'js/user.js' %}"></script>
+
+
+
+
+<div class="pricing-container">
+    <div class="row">
+        <div class="col-lg-12 col-12 col-md-12 col-sm-12">
+            <h1 id="one">Our Products</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 id="two"> Grocery</h1>
+        </div>
+    </div>
+    
+    <div class="row">
+      {% for product in products %}
+        <div class="col-lg-4 col-4"><div class="card" style="width: 18rem;">
+            <img src="{{product.product_image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.product_title}}</h5>
+              <p class="">{{product.product_category}}</p>
+              <p class="rate">{{product.product_price}}</p>
+              <p class="description">{{product.product_description}}</p>
+              <a href="" class="btn btn-primary">Add to cart</a>
+              <a href="" class="wishlist"><i class="bi bi-heart"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg></i></a>
+              <!-- <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a> -->
+              
+            </div>
+           </div></div>
+           {% endfor %}
+          </div><br><br>
+
+        <!-- <div class="col-lg-4"><div class="card" style="width: 18rem;">
+            <img src="{% static 'images/grocery-sugar.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Sugar</h5>
+              <p class="rate">$10/-</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+            </div>
+          </div></div>
+        <div class="col-lg-4"><div class="card" style="width: 18rem;">
+            <img src="{% static 'images/grocery-soap.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Soap</h5>
+              <p class="rate">$15/-</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+            </div>
+          </div></div> -->
+    
+    <!-- <div class="row">
+        <div class="col-lg-4"><div class="card" style="width: 18rem;">
+            <img src="{% static 'images/grocery-chillipowder.webp' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chilli-powder</h5>
+             <p class="rate">1kg-$400/-</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+
+            </div>
+          </div></div>
+        <div class="col-lg-4"><div class="card" style="width: 18rem;">
+            <img src="{% static 'images/grocery-salt.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Salt</h5>
+              <p class="rate">1kg-$15/-</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+
+            </div>
+          </div></div>
+        <div class="col-lg-4"><div class="card" style="width: 18rem;">
+            <img src="{% static 'images/grocery-dishwashbar.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Dishwash-bar</h5>
+              <p class="rate">$10/-</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+            </div>
+          </div></div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-lg-4"><div class="card" style="width: 18rem;">
+            <img src="{% static 'images/grocery-basmatirice.webp' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Basmati-rice</h5>
+             <p class="rate">1kg-$40/-</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+
+            </div>
+          </div></div>
+        <div class="col-lg-4"><div class="card" style="width: 18rem;">
+            <img src="{% static 'images/grocery-oil.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Oil</h5>
+              <p class="rate">1L-$120/-</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+            </div>
+          </div></div>
+        <div class="col-lg-4 col-4"><div class="card" style="width: 18rem;">
+            <img src="{% static 'images/grocery-turmeric.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Turmeric-Powder</h5>
+              <p class="rate">1kg-$100/-</p>
+              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+            </div>
+          </div></div>
+    </div>
+</div><br><br> -->
+<!-- fruitsconntainer -->
+          <!-- <div class="pricing-container">
+            <div class="row">
+              <div class="col-lg-12">
+                  <h1 id="two">Fruits</h1>
+              </div>
+          </div>
+            <div class="row">
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruit-orange.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Orange</h5>
+                  <p class="rate">1kg-$40/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruits-apple.jfif' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Apple</h5>
+                  <p class="rate">1kg-$60/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruits-banana.jfif' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="rate">$75/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+            </div><br><br>
+            <div class="row">
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruits-chiku.jfif' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Chiku</h5>
+                  <p class="rate">1kg-$120/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruits-grape.jfif' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Grape</h5>
+                 <p class="rate">1kg-$95/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruits-guava.jfif' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Guava</h5>
+                  <p class="rate">1kg-$92/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+            </div><br><br>
+            <div class="row">
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruits-papaya.jfif' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Papaya</h5>
+                 <p class="rate">1kg-$200/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart </a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruits-pineapple.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Pineapple</h5>
+                  <p class="rate">1kg-$70/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+              <div class="col-4"><div class="card" style="width: 18rem;">
+                <img src="{% static 'images/fruits-pomegranate.jfif' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Pomogranate</h5>
+                  <p class="rate">1kg-$62/-</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                </div>
+              </div></div>
+            </div>
+          </div><br><br> -->
+            <!-- vegetablescontainer -->
+            
+            <!-- <div class="pricing-container">
+              <div class="row">
+                <div class="col-lg-12">
+                    <h1 id="two">Vegetables</h1>
+                </div>
+            </div>
+              <div class="row">
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-beetroot.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Beetroot</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-brinjal.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Brinjal</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-carrot.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Carrot</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+              </div><br><br>
+              <div class="row">
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-cauliflower.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Cauliflower</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-greenchili.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Greenchili</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-ladyfingers.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Ladyfingers</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+              </div><br><br>
+              <div class="row">
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-onion.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Onion</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-potato.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Potato</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+                <div class="col-4"><div class="card" style="width: 18rem;">
+                  <img src="{% static 'images/veg-tomato.jfif' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Tomato</h5>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                    <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                  </div>
+                </div></div>
+              </div><br><br> -->
+              <!-- chocolatescontainer -->
+              <!-- <div class="pricing-container">
+                <div class="row">
+                  <div class="col-lg-12">
+                      <h1 id="two">Chocolates</h1>
+                  </div>
+              </div><br><br>
+                <div class="row">
+                  <div class="col-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-dairymilk.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart</a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div>
+                  <div class="col-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-ferrerorocher.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart</a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div>
+                  <div class="col-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-gems.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart</a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div>
+                </div><br><br>
+                <div class="row">
+                  <div class="col-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-hersheys.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart </a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div>
+                  <div class="col-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-kitkat.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart</a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div>
+                  <div class="col-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-milkybar.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart</a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div>
+                </div><br><br>
+                <div class="row">
+                  <div class="col-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-peark.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart</a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div>
+                  <div class="col-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-snickers.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart</a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div>
+                  <div class="col-4 col-lg-4 col-sm-4 col-md-4 col-xl-4"><div class="card" style="width: 18rem;">
+                    <img src="{% static 'images/choc-toblerone.jfif' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <a href="#" class="btn btn-primary">Add to cart</a>
+                      <a href="{% url 'grostore:productdetails_html' %}" class="btn btn_details">product details</a>
+                    </div>
+                  </div></div> -->
+                </div><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+{% endblock %}
