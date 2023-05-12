@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import *
 # Create your views here.
-
+# homepage.....................................
 def adminhome(request):
     if 'adminid' in request.session:
         admin_id = request.session['adminid']
@@ -10,6 +10,7 @@ def adminhome(request):
     else:
         return render(request,"adminlogin.html")
 
+# product upload.....................................
 def product_uploads(request):
     message =""
     # if 'adminid' in request.session:
@@ -29,6 +30,7 @@ def product_uploads(request):
         message = 'product uploaded'
     return render(request,"adminproductupload.html",{'res':message})
 
+# product display.....................................
 def showproduct(request):
     if 'adminid' in request.session:
         admin_id = request.session['adminid']
@@ -55,6 +57,7 @@ def updateproducts(request,productid):
     update_product = products_upload.objects.get(id=productid)
     return render(request,"updateproducts.html",{'products':update_product})
 
+# admin login.................................................
 def account(request):
     if 'adminid' in request.session:
         admin_id = request.session['adminid']
