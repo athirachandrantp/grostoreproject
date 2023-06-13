@@ -12,7 +12,7 @@
     <form action="" method="post" enctype="multipart/form-data" class="product">
         {% csrf_token %}
         <div class="product_border"><br><br>
-            <br><br>
+        
             <div class="u_title"> <label for="">TITLE :</label>
                 <input type="text" name="u_title" id="">
             </div><br><br>
@@ -26,13 +26,13 @@
                 <option value="">Choclates</option>
             </select>
 
-            </div><br><br>
-            <div class="u_number"> <label for="">Quantitiy :</label>
+            </div><br>
+            <div class="u_quantity"> <label for="">QUANTITY :</label>
                 <input type="number" name="u_quantity" id="">
-            </div>
-            <div class="u_number"> <label for="">price :</label>
+            </div><br>
+            <div class="u_price"> <label for="">PRICE :</label>
                 <input type="text" name="u_price" id="">
-            </div>
+            </div><br>
             <div class="u_description"><label for="">DESCRIPTION :</label>
                 <input type="text" name="u_description" id="">
             </div><br><br>

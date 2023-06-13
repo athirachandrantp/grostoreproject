@@ -46,12 +46,31 @@
     font-weight: bold;
 }
 .u_category select{
-    margin-left: 50px;
+    margin-left: 55px;
     width: 202px;
     height: 27px;
     border-width: 2px;
     border-color: black;
     border-radius: 4px;
+}
+.u_price{
+    margin-left: 65px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.u_price input{
+    margin-left: 60px;
+    border-radius: 4px;
+}
+.u_quantity input{
+    margin-left: 60px;
+    border-radius: 4px;
+}
+.u_quantity{
+    margin-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
 }
 .u_description{
     margin-left: 30px;

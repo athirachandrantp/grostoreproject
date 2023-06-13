@@ -65,9 +65,9 @@ def account(request):
     else:
         return render(request,"adminlogin.html")
 
-def admin_register(request):
+def admin_register(request):                 #admin registration
     msg=""
-    if request.method == "POST":
+    if request.method == "POST":                         
         name = request.POST['ad_name']
         address = request.POST['ad_address']
         number = request.POST['ad_number']
